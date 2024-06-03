@@ -1,0 +1,191 @@
+/* Global styles */
+body {
+  background: #000000; /* Black background */
+  color: #F0EDCF; /* Light yellowish color for text */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #F0EDCF; /* Matching the text color */
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F0EDCF; /* Matching the text color */
+}
+
+input {
+  max-width: 350px;
+  width: 90%;
+  height: 40px;
+  border-radius: 20px;
+  background: #323232; /* Dark grey input background */
+  padding: 10px;
+  font-size: 1rem;
+  color: #F0EDCF; /* Light text color */
+  text-align: center;
+  border: 2px solid #0B60B0; /* Blue border */
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #40A2D8; /* Light blue glow on focus */
+  outline: none;
+}
+
+img {
+  width: 90%;
+  max-width: 350px;
+  margin-top: 30px;
+  border-radius: 10px;
+  /* No border here initially */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Optional shadow for better effect */
+}
+
+#btn {
+  color: #ffffff;
+  padding: 15px 25px;
+  background-color: #0B60B0; /* Primary blue color */
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#btn:hover {
+  background-color: #094a8b; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+#download-btn {
+  color: #ffffff;
+  padding: 15px 25px;
+  background-color: #0B60B0; /* Primary blue color */
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px; /* Reduced margin */
+  display: none; /* Hidden by default */
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#download-btn:hover {
+  background-color: #094a8b; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background: #333333; /* Dark grey for the button */
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(45deg, #0B60B0, #40A2D8, #0B60B0, #40A2D8, #0B60B0, #40A2D8);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+      background-position: 0 0;
+  }
+  50% {
+      background-position: 400% 0;
+  }
+  100% {
+      background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  body {
+      gap: 10px;
+      padding: 10px;
+  }
+
+  h1 {
+    text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+  }
+  label{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  input {
+      width: 90%;
+      height: 30px;
+      font-size: 0.9rem;
+  }
+
+  img {
+      width: 90%;
+      max-width: none;
+      margin-top: 20px;
+  }
+
+  #btn, #download-btn {
+      width: 30%;
+      padding: 12px;
+      font-size: 14px;
+      text-align: center;
+  }
+}
