@@ -72,4 +72,3 @@ Feel free to contribute and enhance this project! If you have any issues or sugg
 **Happy Coding!** 🎉
 ```
 
-This updated README now includes detailed steps on how to integrate and use the Hugging Face API for generating images.
